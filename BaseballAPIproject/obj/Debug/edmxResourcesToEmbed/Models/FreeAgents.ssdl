@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FreeAgentsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'FreeAgents.dbo.Free Agents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Free Agents">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Pos" />
+      <PropertyRef Name="Age" />
+      <PropertyRef Name="Avg_Total" />
+      <PropertyRef Name="Med_Total" />
+      <PropertyRef Name="playerid" />
+    </Key>
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pos" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prev_Team" Type="nvarchar" MaxLength="50" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="Prev_WAR" Type="float" />
+    <Property Name="Proj_WAR" Type="float" />
+    <Property Name="Avg_Years" Type="nvarchar" MaxLength="50" />
+    <Property Name="Avg_Total" Type="float" Nullable="false" />
+    <Property Name="Med_Years" Type="nvarchar" MaxLength="50" />
+    <Property Name="Med_Total" Type="float" Nullable="false" />
+    <Property Name="QO" Type="nvarchar" MaxLength="50" />
+    <Property Name="Signing_Team" Type="nvarchar" MaxLength="50" />
+    <Property Name="Date" Type="nvarchar" MaxLength="50" />
+    <Property Name="Years" Type="nvarchar" MaxLength="50" />
+    <Property Name="Salary" Type="nvarchar" MaxLength="50" />
+    <Property Name="column_16" Type="nvarchar" MaxLength="1" />
+    <Property Name="playerid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="FreeAgentsModelStoreContainer">
+    <EntitySet Name="Free Agents" EntityType="Self.Free Agents" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Free Agents].[Name] AS [Name], 
+    [Free Agents].[Pos] AS [Pos], 
+    [Free Agents].[Prev_Team] AS [Prev_Team], 
+    [Free Agents].[Age] AS [Age], 
+    [Free Agents].[Prev_WAR] AS [Prev_WAR], 
+    [Free Agents].[Proj_WAR] AS [Proj_WAR], 
+    [Free Agents].[Avg_Years] AS [Avg_Years], 
+    [Free Agents].[Avg_Total] AS [Avg_Total], 
+    [Free Agents].[Med_Years] AS [Med_Years], 
+    [Free Agents].[Med_Total] AS [Med_Total], 
+    [Free Agents].[QO] AS [QO], 
+    [Free Agents].[Signing_Team] AS [Signing_Team], 
+    [Free Agents].[Date] AS [Date], 
+    [Free Agents].[Years] AS [Years], 
+    [Free Agents].[Salary] AS [Salary], 
+    [Free Agents].[column_16] AS [column_16], 
+    [Free Agents].[playerid] AS [playerid]
+    FROM [dbo].[Free Agents] AS [Free Agents]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
