@@ -58,6 +58,7 @@ namespace BaseballAPIproject.Controllers
             JObject BaseballJson2 = JObject.Parse(data2);
             //List<PlayerData> output2 = new List<PlayerData>();
             pr.ID = ID;
+            //hello world
             pr.FirstName = BaseballJson["search_player_all"]["queryResults"]["row"][0]["name_first"].ToString();
             pr.LastName = BaseballJson["search_player_all"]["queryResults"]["row"][0]["name_last"].ToString();
             //pr.Age = BaseballJson2["search_player_all"]["queryResults"]["row"][""].ToString();
