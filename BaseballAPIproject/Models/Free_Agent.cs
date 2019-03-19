@@ -17,6 +17,7 @@ namespace BaseballAPIproject.Models
         public string Name { get; set; }
         public string Pos { get; set; }
         public string Prev_Team { get; set; }
+
         public int Age { get; set; }
         public Nullable<double> Prev_WAR { get; set; }
         public Nullable<double> Proj_WAR { get; set; }

@@ -130,6 +130,7 @@ namespace BaseballAPIproject.Controllers
             List<double> DolperWar = new List<double>();
             Player = db.Free_Agents.ToList();
 
+
             ViewBag.PlayerList = Player;
 
 

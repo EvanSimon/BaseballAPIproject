@@ -10,22 +10,23 @@
     {
         <tr>
 
-            <td>
+            <td> 
+
                 @ViewBag.PlayerList[i].Name
             </td>
 
-            @if (Player.Salary == null)
+            @if (ViewBag.PlayerList[i].Salary == null)
             {
                 <td>Player has not signed</td>
             }
             else
             {
                 <td>
-                    @Player.Salary
+                    @ViewBag.PlayerList[i].Salary
                 </td>
             }
 
-            @if (Player.Prev_WAR == null)
+            @if (ViewBag.Prev_WAR[i] == null)
             {
                 <td>0</td>
             }
