@@ -123,5 +123,74 @@ namespace BaseballAPIproject.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult SalToWar()
+        {
+            List<Free_Agent> Player = new List<Free_Agent>();
+            List<double> DolperWar = new List<double>();
+            Player = db.Free_Agents.ToList();
+
+            ViewBag.PlayerList = Player;
+
+
+            foreach (Free_Agent player in Player)
+            {
+                
+                if (player.Prev_WAR == null)
+                {
+                    player.Prev_WAR = 0;
+                }
+
+                if(player.Salary != null)
+                {
+                    DolperWar.Add(double.Parse(player.Salary) / (double)player.Prev_WAR);
+                }
+
+                else
+                {
+                    DolperWar.Add((double)player.Prev_WAR);
+                }
+            }
+
+            ViewBag.DolperWar = DolperWar;
+
+            return View();
+
+
+        }
+
+        public ActionResult Pitchers()
+        {
+            List<Free_Agent> Pitch = new List<Free_Agent>();
+            List<Free_Agent> output = new List<Free_Agent>();
+            Pitch = db.Free_Agents.ToList();
+
+            foreach (Free_Agent P in Pitch)
+            {
+                if(P.Pos =="SP/RP"|| P.Pos == "SP"|| P.Pos == "RP")
+                {
+                    output.Add(P);
+                    ViewBag.Pitcher = output;                 
+                }             
+            }
+            return View();
+        }     
+        public ActionResult PostionPlayers()
+        {
+            List<Free_Agent> Postion = new List<Free_Agent>();
+            List<Free_Agent> output2 = new List<Free_Agent>();
+            Postion = db.Free_Agents.ToList();
+
+            foreach (Free_Agent P in Postion)
+            {
+                if (P.Pos != "SP/RP" && P.Pos != "SP" && P.Pos != "RP")
+                {
+                    output2.Add(P);
+                    ViewBag.Postion = output2;
+                }
+            }
+            return View();
+        }     
+            
     }
 }

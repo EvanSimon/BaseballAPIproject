@@ -1,0 +1,45 @@
+﻿@model IEnumerable<BaseballAPIproject.Models.Free_Agent>
+@{
+    ViewBag.Title = "SalToWar";
+}
+
+<h2>Dollar's to WAR calculator</h2>
+
+<table>
+    @for (int i = 0; i < ViewBag.PlayerList; i++)
+    {
+        <tr>
+
+            <td>
+                @ViewBag.PlayerList[i].Name
+            </td>
+
+            @if (Player.Salary == null)
+            {
+                <td>Player has not signed</td>
+            }
+            else
+            {
+                <td>
+                    @Player.Salary
+                </td>
+            }
+
+            @if (Player.Prev_WAR == null)
+            {
+                <td>0</td>
+            }
+            else
+            {
+                <td>
+                    @Player.Prev_WAR
+                </td>
+            }
+
+            <td></td>
+
+        </tr>
+
+    }
+
+</table>

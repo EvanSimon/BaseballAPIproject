@@ -220,6 +220,9 @@
     <Content Include="Views\FreeAgent\Details.cshtml" />
     <Content Include="Views\FreeAgent\Edit.cshtml" />
     <Content Include="Views\FreeAgent\Index.cshtml" />
+    <Content Include="Views\FreeAgent\Pitchers.cshtml" />
+    <Content Include="Views\FreeAgent\PostionPlayers.cshtml" />
+    <Content Include="Views\FreeAgent\SalToWar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -31,5 +31,6 @@ namespace BaseballAPIproject.Models
         public string Salary { get; set; }
         public string column_16 { get; set; }
         public int playerid { get; set; }
+        public double SalToWar { get; set; }
     }
 }
